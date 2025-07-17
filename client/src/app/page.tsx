@@ -19,7 +19,8 @@ export default function Home() {
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-     const ws = new WebSocket('ws://localhost:5001');
+    //  const ws = new WebSocket('ws://localhost:5001');
+     const ws = new WebSocket('ws://ec2-13-233-31-67.ap-south-1.compute.amazonaws.com:5001');
 
     ws.onopen = () => {
       console.log('Connected to WebSocket server');
